@@ -3,17 +3,19 @@ package Com.school;
 public class Teacher extends Person {
     private String subjectTaught;
 
-    // Constructor
     public Teacher(String name, String subjectTaught) {
-        super(name);
+        super(name); // Calls Person constructor
         this.subjectTaught = subjectTaught;
     }
 
-    // Overridden method
+    // Getter for subjectTaught (optional for now)
+    public String getSubjectTaught() {
+        return subjectTaught;
+    }
+
     @Override
     public void displayDetails() {
         super.displayDetails();
-        System.out.println("Subject Taught: " + subjectTaught + ", Role: Teacher");
+        System.out.println(", Subject: " + subjectTaught + " (Role: Teacher)");
     }
 }
-
